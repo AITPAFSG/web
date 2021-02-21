@@ -41,17 +41,17 @@
 								<a href="" class="image fit"><img src="images/pic01_2.jpg" alt="" /></a>
 								<div class="inner">
 									<h3>About Us</h3>
-									<p>(TBC)Testing</p>
-									<a href="" class="button fit" data-poptrox="youtube,800x400">More</a>
+									<p>(TBC)Testing</p>							
+									<button id="myBtn01" class="button fit">MORE</button>
 								</div>
-							</div>
-
+							</div>						
+							
 							<div class="box">
 								<a href="" class="image fit"><img src="images/pic02_2.jpg" alt="" /></a>
 								<div class="inner">
 									<h3>Mission & Vision</h3>
 									<p>(TBC)Testing</p>
-									<a href="" class="button style2 fit" data-poptrox="youtube,800x400">More</a>
+									<button id="myBtn02" class="button style2 fit">MORE</button>
 								</div>
 							</div>
 
@@ -60,16 +60,16 @@
 								<div class="inner">
 									<h3>Feasibility Study Projects</h3>
 									<p>(TBC)Testing</p>
-									<a href="" class="button style3 fit" data-poptrox="youtube,800x400">More</a>
+									<button id="myBtn03" class="button style3 fit">MORE</button>
 								</div>
 							</div>
 
 							<div class="box">
 								<a href="" class="image fit"><img src="images/pic04_2.jpg" alt="" /></a>
 								<div class="inner">
-									<h3>Academic research and studies</h3>
+									<h3>Academic Research and Studies</h3>
 									<p>(TBC)Testing</p>
-									<a href="" class="button style2 fit" data-poptrox="youtube,800x400">More</a>
+									<a href="" class="button style2 fit" data-poptrox="youtube,800x400">Details</a>
 								</div>
 							</div>
 
@@ -78,7 +78,7 @@
 								<div class="inner">
 									<h3>Partnership</h3>
 									<p>(TBC)Testing</p>
-									<a href="" class="button style3 fit" data-poptrox="youtube,800x400">More</a>
+									<a href="" class="button style3 fit" data-poptrox="youtube,800x400">Details</a>
 								</div>
 							</div>
 
@@ -87,10 +87,79 @@
 								<div class="inner">
 									<h3>Contact Us</h3>
 									<p>(TBC)Testing</p>
-									<a href="" class="button fit" data-poptrox="youtube,800x400">More</a>
+									<a href="" class="button fit" data-poptrox="youtube,800x400">Details</a>
 								</div>
 							</div>
-
+							
+							<!-- The Modal -->
+							<div id="myModal01" class="modal">
+							  <!-- Modal content -->
+							  <div class="modal-content">
+								<div>
+									<span class="close" id="closeBtn01">&times;</span>
+								</div>
+								<div>
+									About Us
+									<br/>
+									
+									<br/>
+									愛國IT從業員Michael，為響應國家精準扶貧及人工智能發展之大方針，於2021年2月15日自資籌辦"人工智能精準扶貧調研小組"。
+									<br/>
+									冀利用工餘時間，報效祖國之餘，自我增值。
+									<br/>
+									雖知萤火之光，不能與皓月爭輝，但為國為民，利己及人之初心，可昭日月。
+									<br/>
+									<br/>
+									<img src="images/logo.jfif" alt="" />
+								</div>
+							  </div>
+							</div>
+							<!-- The Modal -->
+							<div id="myModal02" class="modal">
+							  <!-- Modal content -->
+							  <div class="modal-content">
+								<div>
+									<span class="close" id="closeBtn02">&times;</span>
+								</div>
+								<div>
+									Mission & Vision
+									<br/>
+									適逢百年不遇大變局，<br/>
+									願當技術攻堅排頭兵。<br/>
+								</div>
+							  </div>
+							</div>							
+							<!-- The Modal -->
+							<div id="myModal03" class="modal">
+							  <!-- Modal content -->
+							  <div class="modal-content">
+								<div>
+									<span class="close" id="closeBtn03">&times;</span>
+								</div>
+								<div>
+									Project 01 Introduction
+									<br/>
+									辛丑年春節期間與上海哲學愛好者談及當年出席杭州阿里開發者大會之經歷: 
+									<br/>
+									與我國各地青年開發者於會中交流,與阿里干部於西湖畔樓外樓品嚐大閘蟹, 見IT鉅子馬云聽其議論之宏辯。
+									<br/>
+									及後閱讀其關於『精準扶貧』的新聞報導, 受其啟發產生了技術報國的想法。
+									<br/>
+									第一個『人工智能精準扶貧』的點子, 蘊釀於哲學群組的頭腦風暴風眼中。
+									<br/>
+									<br/>
+									Project 02 Introduction
+									<br/>
+									TBC
+									<br/>
+									<br/>	
+									Project 03 Introduction
+									<br/>
+									TBC
+									
+								</div>
+							  </div>
+							</div>	
 						</div>
 
 					</div>
@@ -119,6 +188,104 @@
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+			// Get the modal
+				var modal01 = document.getElementById("myModal01");
+
+				// Get the button that opens the modal
+				var btn01 = document.getElementById("myBtn01");
+
+				// Get the <span> element that closes the modal
+				var span01 = document.getElementById("closeBtn01");
+
+				// When the user clicks on the button, open the modal
+				btn01.onclick = function() {
+				  modal01.style.display = "block";
+				}
+
+				// When the user clicks on <span> (x), close the modal
+				span01.onclick = function() {
+				  modal01.style.display = "none";
+				}
+
+				// When the user clicks anywhere outside of the modal, close it
+				window.onclick = function(event) {
+				  if (event.target == modal) {
+					modal01.style.display = "none";
+				  }
+				}
+				// Get the modal
+				var modal02 = document.getElementById("myModal02");
+
+				// Get the button that opens the modal
+				var btn02 = document.getElementById("myBtn02");
+
+				// Get the <span> element that closes the modal
+				var span02 = document.getElementById("closeBtn02");
+
+				// When the user clicks on the button, open the modal
+				btn02.onclick = function() {
+				  modal02.style.display = "block";
+				}
+				// When the user clicks on <span> (x), close the modal
+				span02.onclick = function() {
+				  modal02.style.display = "none";
+				}
+
+				// Get the modal
+				var modal03 = document.getElementById("myModal03");
+
+				// Get the button that opens the modal
+				var btn03 = document.getElementById("myBtn03");
+
+				// Get the <span> element that closes the modal
+				var span03 = document.getElementById("closeBtn03");
+
+				// When the user clicks on the button, open the modal
+				btn03.onclick = function() {
+				  modal03.style.display = "block";
+				}
+				// When the user clicks on <span> (x), close the modal
+				span03.onclick = function() {
+				  modal03.style.display = "none";
+				}				
+				// Get the modal
+				var modal03 = document.getElementById("myModal03");
+
+				// Get the button that opens the modal
+				var btn03 = document.getElementById("myBtn03");
+
+				// Get the <span> element that closes the modal
+				var span03 = document.getElementById("closeBtn03");
+
+				// When the user clicks on the button, open the modal
+				btn03.onclick = function() {
+				  modal03.style.display = "block";
+				}
+				// When the user clicks on <span> (x), close the modal
+				span03.onclick = function() {
+				  modal03.style.display = "none";
+				}
+
+				// Get the modal
+				var modal03 = document.getElementById("myModal03");
+
+				// Get the button that opens the modal
+				var btn03 = document.getElementById("myBtn03");
+
+				// Get the <span> element that closes the modal
+				var span03 = document.getElementById("closeBtn03");
+
+				// When the user clicks on the button, open the modal
+				btn03.onclick = function() {
+				  modal03.style.display = "block";
+				}
+				// When the user clicks on <span> (x), close the modal
+				span03.onclick = function() {
+				  modal03.style.display = "none";
+				}
+				
+			</script>
 
 	</body>
 </html>
