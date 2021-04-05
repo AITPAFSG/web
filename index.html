@@ -229,12 +229,12 @@
       </ul>
     </div>
     <div class="one_third">
-      <form method="post" id="regForm" onsubmit="emailReg();">
+      <form method="post" action="" id="regForm" >
         <fieldset>
           <legend>Newsletter & DB Account:</legend>
           <div class="clear">
             <input type="text" value="" name="fname" id="fname" placeholder="Type Email Here&hellip;">
-            <button class="fa fa-share" type="submit" title="Submit"><em>Submit</em></button>
+            <button class="fa fa-share" type="submit" title="Submit" onclick="emailReg()"><em>Submit</em></button>
           </div>
         </fieldset>
       </form>
@@ -269,14 +269,20 @@
 		
 		let form = document.getElementById('regForm');
 		let name = form.elements['fname'];
-		//let email = name.value;
-		return re.test(name.value.trim()) ?
-        postemail() :
+		let email = name.value.trim();
+		return re.test(email) ?
+		alert('Valid email'):
         alert('Invalid email format');		
 	}
-	function postemail(){
+
+
+	$("#regForm").submit(function(){
 		alert('Online registration service WIP');
-	}
+		$.post("https://aitpafsg.df.r.appspot.com/quarks", $(this).serialize(), function(data){
+			alert('data');
+		});
+						
+	});	
 </script>
 </body>
 </html>
