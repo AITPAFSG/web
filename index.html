@@ -229,11 +229,11 @@
       </ul>
     </div>
     <div class="one_third">
-      <form action="javascript:completeAndRedirect();">
+      <form method="post" id="regForm" onsubmit="emailReg();">
         <fieldset>
           <legend>Newsletter & DB Account:</legend>
           <div class="clear">
-            <input type="text" value="" name="fname" placeholder="Type Email Here&hellip;">
+            <input type="text" value="" name="fname" id="fname" placeholder="Type Email Here&hellip;">
             <button class="fa fa-share" type="submit" title="Submit"><em>Submit</em></button>
           </div>
         </fieldset>
@@ -263,7 +263,18 @@
 <script src="layout/scripts/jquery.mobilemenu.js"></script>
 <script src="layout/scripts/jquery.flexslider-min.js"></script>
 <script>
-	function completeAndRedirect(){
+	function emailReg(){
+		
+		const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		
+		let form = document.getElementById('regForm');
+		let name = form.elements['fname'];
+		//let email = name.value;
+		return re.test(name.value.trim()) ?
+        postemail() :
+        alert('Invalid email format');		
+	}
+	function postemail(){
 		alert('Online registration service WIP');
 	}
 </script>
